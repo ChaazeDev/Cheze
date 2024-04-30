@@ -7,6 +7,11 @@ import json
 from pynput import keyboard
 from threading import Thread
 
+selected_sound=None
+
+
+
+
 def playOnMic(sound):
 	print("eyy lmao")
 
@@ -27,6 +32,7 @@ def on_press(key):
 
 				for double in playable_sounds:
 					if double[0] == sound.split("/")[len(sound.split("/"))-1]:
+						double[1].set_volume(float(settings[sound]["volume"])/100)
 						double[1].play()
 						playMic = Thread(target=playOnMic, args=(double[1],))
 						playMic.start()
@@ -69,23 +75,32 @@ def open_file_dialog():
         
         play_audio.configure(state="normal")
 
+
+
+
 def play_file_audio():
-	global playing
-	if playing == True:
-		selected_sound.stop()
-		play_audio.configure(text="Play audio")
-		playing = False
-	else:
-		if not volume.get() == "":
-			selected_sound.set_volume(float(volume.get())/100)
-		selected_sound.play()
-		play_audio.configure(text="Stop audio")
-		playing = True
+	
+	try:
+		global playing
+		if playing == True:
+			selected_sound.stop()
+			play_audio.configure(text="Play audio")
+			playing = False
+		else:
+			if not volume.get() == '':
+				selected_sound.set_volume(float(volume.get())/100)
+			selected_sound.play()
+			play_audio.configure(text="Stop audio")
+			playing = True
+		error_box.configure(text="")
+	except ValueError:
+		error_box.configure(text="Non-number volume.")
+
 	
 def on_closing():
 	if messagebox.askokcancel("Quit", "Are you sure you want to quit?"):
 		global settings
-		with open("Cheze/settings.json", "w") as settingsFile:			
+		with open("settings.json", "w") as settingsFile:			
 			try:
 				json.dump(settings, settingsFile)
 				settingsFile.close()
@@ -177,7 +192,7 @@ def reconfig_audio2(choice):
 def initiate_program():
 	global playable_sounds
 	global stopKey
-	with open("Cheze/settings.json", "r") as settingsFile:	
+	with open("settings.json", "r") as settingsFile:	
 		global settings
 		settings = json.load(settingsFile)
 		settingsFile.close()
@@ -284,6 +299,9 @@ if __name__ == '__main__':
 
 	cancel_other = tk.CTkCheckBox(settingsFrame, text="Stop other sounds", state="disabled", command=changeCancel)
 	cancel_other.grid(row=2, column=0, columnspan=2, pady=10)
+
+	error_box = tk.CTkLabel(master=settingsFrame, text="", text_color="red")
+	error_box.grid(row=3,column=0, columnspan=3)
 
 	settingsFrame.grid_rowconfigure(99, weight=1)
 	settingsFrame.grid_rowconfigure(98, weight=100)
