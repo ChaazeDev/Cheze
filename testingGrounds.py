@@ -2,10 +2,17 @@ import customtkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
 import pygame._sdl2.audio as sdl2_audio
+import pyaudio
 from pygame import mixer
+from pygame import time
 import json
 from pynput import keyboard
 from threading import Thread
+from pydub import AudioSegment
+import wave
+from time import sleep
+
+
 
 selected_sound=None
 
@@ -13,8 +20,86 @@ selected_sound=None
 
 
 def playOnMic(sound):
-	print("eyy lmao")
+    # Find the sound path
+    sound_name = None
+    for item in playable_sounds:
+        if item[1] == sound:
+            sound_name = item[0]
+            break
 
+    if not sound_name:
+        print("Sound path not found.")
+        return
+
+    # Find the corresponding file in settings
+    sound_path = None
+    for sfx in settings:
+        if sfx != "global" and settings[sfx]["name"] == sound_name:
+            sound_path = sfx
+            break
+
+    if not sound_path:
+        print("Sound file not found in settings.")
+        return
+
+    # Load the file using pydub
+    try:
+        audio = AudioSegment.from_file(sound_path)
+        audio = audio.set_sample_width(2)
+    except Exception as e:
+        print(f"Error loading sound file: {e}")
+        return
+
+    # Convert to WAV (PyAudio works best with WAV files)
+    wav_path = "temp_sound.wav"
+    audio.export(wav_path, format="wav")
+
+    # Initialize PyAudio
+    p = pyaudio.PyAudio()
+
+    # Get the name of the audio device from settings
+    device_name = settings["global"]["audio1"]
+    print(device_name)
+
+    # List available devices to find the device index
+    device_index = None
+    num_devices = p.get_device_count()
+
+    for i in range(num_devices):
+        device_info = p.get_device_info_by_index(i)
+        if device_info["name"] == device_name:
+            device_index = i
+            break
+
+    if device_index is None:
+        print(f"Audio device '{device_name}' not found.")
+        return
+
+    # Open the WAV file for reading
+    wf = wave.open(wav_path, 'rb')
+
+    # Open stream with the selected device (Virtual Audio Cable)
+    stream = p.open(format=pyaudio.paInt16,
+                    channels=wf.getnchannels(),
+                    rate=wf.getframerate(),
+                    output=True,
+                    output_device_index=device_index,
+                    frames_per_buffer=1024)
+
+    # Read and play the sound7
+    data = wf.readframes(1024)
+    while data:
+        stream.write(data)
+        data = wf.readframes(1024)
+
+    while stream.is_active():
+         sleep(0.1)
+	# Close the stream and PyAudio
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    print("Audio playback finished.")
 
 def on_press(key):
 	if str(key) == stopKey:
