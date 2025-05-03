@@ -1,0 +1,23 @@
+{
+    "devices": [
+        {
+            "id": 34,
+            "samplerate": 48000,
+            "channels": 2
+        },
+        {
+            "id": 38,
+            "samplerate": 48000,
+            "channels": 2
+        }
+    ],
+    "sounds": {
+        "103": {
+            "name": "sound1",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0
+        }
+    }
+}
