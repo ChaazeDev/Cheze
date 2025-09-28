@@ -1,0 +1,146 @@
+{
+    "devices": [
+        {
+            "id": 32,
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1
+        },
+        {
+            "id": 40,
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1
+        }
+    ],
+    "sounds": {
+        "104": {
+            "name": "Toilet lied mag ik dan bij jou.mp3",
+            "path": "C:/Users/Chaaze/Music/Toilet lied mag ik dan bij jou.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.5,
+            "speed": 1.0
+        },
+        "unbound": {
+            "name": "creepymusic",
+            "path": "C:/Users/Chaaze/Downloads/pyinstxtractor-master/pyinstxtractor-master/funny.exe_extracted/creepymusic.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 3
+        },
+        "KP_0": {
+            "name": "Chicken jockey",
+            "path": "C:/Users/Chaaze/Music/Chicken jockey.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_1": {
+            "name": "MICHAEL DON'T LEAVE ME HERE SOUND EFFECT",
+            "path": "C:/Users/Chaaze/Music/MICHAEL DON'T LEAVE ME HERE SOUND EFFECT.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.5,
+            "speed": 1.0
+        },
+        "KP_7": {
+            "name": "FESH",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.5,
+            "speed": 1.0
+        },
+        "unbound1": {
+            "name": "output",
+            "path": "C:/Users/Chaaze/Downloads/output.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_5": {
+            "name": "layton",
+            "path": "C:/Users/Chaaze/Music/layton.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_2": {
+            "name": "Michael Jordan_ Stop It, Get Some Help",
+            "path": "C:/Users/Chaaze/Music/Michael Jordan_ Stop It, Get Some Help.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_3": {
+            "name": "Bonk Sound Effect",
+            "path": "C:/Users/Chaaze/Music/Bonk Sound Effect.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "unbound2": {
+            "name": "Bonk Sound Effect",
+            "path": "C:/Users/Chaaze/Music/Bonk Sound Effect.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_4": {
+            "name": "CHICKEN",
+            "path": "C:/Users/Chaaze/Music/CHICKEN.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_6": {
+            "name": "JOCKEY",
+            "path": "C:/Users/Chaaze/Music/JOCKEY.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "Miku and Portal Radio": {
+            "name": "Miku and Portal Radio",
+            "path": "C:/Users/Chaaze/Music/Miku and Portal Radio.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "KP_9": {
+            "name": "Rapr sjors",
+            "path": "C:/Users/Chaaze/Music/Rapr sjors.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "Hello everybody, my name is Markiplier and I am a fish": {
+            "name": "Hello everybody, my name is Markiplier and I am a fish",
+            "path": "C:/Users/Chaaze/Music/Hello everybody, my name is Markiplier and I am a fish.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1.0,
+            "speed": 1.0
+        },
+        "unbound3": {
+            "name": "Discord Ping Sound",
+            "path": "C:/Users/Chaaze/Music/Discord Ping Sound.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1.0
+        }
+    }
+}

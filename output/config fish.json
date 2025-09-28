@@ -1,0 +1,89 @@
+{
+    "devices": [
+        {
+            "id": 32,
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1
+        },
+        {
+            "id": 40,
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 1
+        }
+    ],
+    "sounds": {
+        "KP_0": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 0.2
+        },"KP_1": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 0.4
+        },"KP_2": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 0.6
+        },"KP_3": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 0.8
+        },"KP_4": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1
+        },"KP_5": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1.2
+        },"KP_6": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1.4
+        },"KP_7": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1.6
+        },"KP_8": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 1.8
+        },"KP_9": {
+            "name": "FESH.mp3",
+            "path": "C:/Users/Chaaze/Music/FESH.mp3",
+            "samplerate": 48000,
+            "channels": 2,
+            "volume": 0.3,
+            "speed": 2
+        }
+    }
+}
